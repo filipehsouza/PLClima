@@ -1,0 +1,11 @@
+framework module PLNetwork {
+  umbrella header "PLNetwork.h"
+
+  export *
+  module * { export * }
+}
+
+module PLNetwork.Swift {
+    header "PLNetwork-Swift.h"
+    requires objc
+}

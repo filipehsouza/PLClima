@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:../Frameworks"
+      name = "Frameworks">
+      <Group
+         location = "group:PLNetwork.framework"
+         name = "PLNetwork.framework">
+         <FileRef
+            location = "group:PLNetwork">
+         </FileRef>
+         <Group
+            location = "group:Headers"
+            name = "Headers">
+            <FileRef
+               location = "group:PLNetwork-Swift.h">
+            </FileRef>
+            <FileRef
+               location = "group:PLNetwork.h">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Modules"
+            name = "Modules">
+            <Group
+               location = "group:PLNetwork.swiftmodule"
+               name = "PLNetwork.swiftmodule">
+               <FileRef
+                  location = "group:x86_64.swiftdoc">
+               </FileRef>
+               <FileRef
+                  location = "group:arm64.swiftmodule">
+               </FileRef>
+               <FileRef
+                  location = "group:x86_64.swiftmodule">
+               </FileRef>
+               <FileRef
+                  location = "group:arm64.swiftdoc">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:module.modulemap">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+      </Group>
+   </Group>
+   <FileRef
+      location = "self:PLClima.xcodeproj">
+   </FileRef>
+</Workspace>
