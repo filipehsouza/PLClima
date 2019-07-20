@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="837.68115942028987" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Change City View Controller-->
         <scene sceneID="zlj-VI-6hB">
             <objects>
-                <viewController storyboardIdentifier="ChangeCity" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bo0-LX-qt5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangeCity" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bo0-LX-qt5" customClass="ChangeCityViewController" customModule="PLClima" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yq3-D4-BqW"/>
                         <viewControllerLayoutGuide type="bottom" id="nos-W8-ViF"/>
@@ -134,7 +134,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="getWeatherPressed:" destination="bo0-LX-qt5" eventType="touchUpInside" id="fKV-7e-SVp"/>
+                                            <action selector="getCityWeather:" destination="bo0-LX-qt5" eventType="touchUpInside" id="Wwa-y2-1x1"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xdP-Ud-9x4" userLabel="City Name Text Field">
@@ -152,7 +152,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="backButtonPressed:" destination="bo0-LX-qt5" eventType="touchUpInside" id="yGk-Qu-OCN"/>
+                                            <action selector="goBack:" destination="bo0-LX-qt5" eventType="touchUpInside" id="ETb-iv-9lv"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -184,7 +184,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Vwz-Df-h6X"/>
                     <connections>
-                        <outlet property="changeCityTextField" destination="xdP-Ud-9x4" id="hiW-M0-eeg"/>
+                        <outlet property="cityTextField" destination="xdP-Ud-9x4" id="kvS-GV-R0J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Rt-jR-ho6" userLabel="First Responder" sceneMemberID="firstResponder"/>

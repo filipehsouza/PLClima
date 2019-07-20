@@ -6,10 +6,11 @@
 //  Copyright © 2019 Filipe Souza. All rights reserved.
 //
 
-import CoreLocation
+import Foundation
 
 protocol WeatherInteractorProtocol {
     func getWeather(fromLat lat: String, andLong long: String, _ completion: @escaping (_ weather: Weather?) -> Void)
+    func getCityWeather(_ city: String, _ completion: @escaping (_ weather: Weather?) -> Void)
 }
 
 class WeatherInteractor: WeatherInteractorProtocol {
@@ -21,6 +22,16 @@ class WeatherInteractor: WeatherInteractorProtocol {
     
     func getWeather(fromLat lat: String, andLong long: String, _ completion: @escaping (Weather?) -> Void) {
         self.apiService.getWeather(fromLat: lat, andLong: long) { (weather, error) in
+            guard let _ = weather else {
+                completion(nil)
+                return
+            }
+            completion(weather)
+        }
+    }
+    
+    func getCityWeather(_ city: String, _ completion: @escaping (Weather?) -> Void) {
+        self.apiService.getWeather(fromCity: city) { (weather, error) in
             guard let _ = weather else {
                 completion(nil)
                 return

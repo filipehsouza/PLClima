@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol WeatherRouterProtocol {
-    func showChangeCityScreen()
+    func showChangeCityScreen(_ completion: @escaping (String) -> Void)
 }
 
 class WeatherRouter: WeatherRouterProtocol {
@@ -20,10 +20,13 @@ class WeatherRouter: WeatherRouterProtocol {
         self.presentingViewController = presentingViewController
     }
     
-    func showChangeCityScreen() {        
+    func showChangeCityScreen(_ completion: @escaping (String) -> Void) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let changeCityViewController = storyboard.instantiateViewController(withIdentifier: "ChangeCity")
-        
+        guard let viewController = changeCityViewController as? ChangeCityViewController else {
+            fatalError("ViewController is not from ChangeCityViewController class")
+        }
+        viewController.completion = completion
         presentingViewController.present(changeCityViewController, animated: true, completion: nil)
     }
     

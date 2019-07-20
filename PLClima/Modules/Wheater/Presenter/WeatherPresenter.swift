@@ -9,11 +9,12 @@
 import Foundation
 
 protocol WeatherPresenterProtocol {
-    func showCurrentWeather(fromLat lat: String, andLong long: String, _ completion: @escaping (_ weather: WeatherViewModel) -> Void)
-    func showChangeCityScreen()
+    func showWeather(fromLat lat: String, andLong long: String, _ completion: @escaping (_ weather: WeatherViewModel) -> Void)
+    func showChangeCityScreen(_ completion: @escaping (_ weather: WeatherViewModel) -> Void)
 }
 
 class WeatherPresenter: WeatherPresenterProtocol {
+    
     let interactor: WeatherInteractorProtocol
     let router: WeatherRouterProtocol
     
@@ -22,7 +23,7 @@ class WeatherPresenter: WeatherPresenterProtocol {
         self.router = router
     }
     
-    func showCurrentWeather(fromLat lat: String, andLong long: String, _ completion: @escaping (WeatherViewModel) -> Void) {
+    func showWeather(fromLat lat: String, andLong long: String, _ completion: @escaping (WeatherViewModel) -> Void) {
         interactor.getWeather(fromLat: lat, andLong: long) { (weather) in
             guard let weather = weather else {
                 completion(self.createEmptyWeatherViewModel())
@@ -33,8 +34,17 @@ class WeatherPresenter: WeatherPresenterProtocol {
         }
     }
     
-    func showChangeCityScreen() {
-        router.showChangeCityScreen()
+    func showChangeCityScreen(_ completion: @escaping (_ weather: WeatherViewModel) -> Void) {
+        router.showChangeCityScreen { (city) in
+            self.interactor.getCityWeather(city, { (weather) in
+                guard let weather = weather else {
+                    completion(self.createEmptyWeatherViewModel())
+                    return
+                }
+                
+                completion(self.createWeatherViewModel(from: weather))
+            })
+        }
     }
     
     private func createEmptyWeatherViewModel() -> WeatherViewModel {

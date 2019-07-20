@@ -14,6 +14,7 @@ let APP_ID = "51ff7e8934867388923c5ab8f7ea5fb6"
 
 public enum WeatherApi {
     case weather(lat:String, long: String)
+    case weatherFrom(City:String)
 }
 
 extension WeatherApi: EndpointType {
@@ -35,6 +36,9 @@ extension WeatherApi: EndpointType {
         case .weather(let lat, let long):
             return .requestParameters(bodyParameters: nil,
                                       urlParameters: ["lat" : lat, "lon" : long, "appid" : APP_ID])
+        case .weatherFrom(let city):
+            return .requestParameters(bodyParameters: nil,
+                                      urlParameters: ["q": city, "appid" : APP_ID])
         }
     }
     

@@ -23,10 +23,7 @@ class WeatherViewController: UIViewController {
         
         let router = WeatherRouter(presentingViewController: self)
         presenter = WeatherPresenter(router: router)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.requestWhenInUseAuthorization()
@@ -34,7 +31,13 @@ class WeatherViewController: UIViewController {
     }
 
     @IBAction func changeCity(_ sender: UIButton) {
-        presenter.showChangeCityScreen()
+        presenter.showChangeCityScreen { (weather) in
+            DispatchQueue.main.async {
+                self.temperatureLabel.text = "\(weather.temperature)ºC"
+                self.weatherIcon.image = UIImage(named: weather.weatherIcon)
+                self.cityLabel.text = weather.city
+            }
+        }
     }
     
 }
@@ -43,10 +46,9 @@ extension WeatherViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location  = locations[locations.count - 1]
         if location.horizontalAccuracy > 0 {
-            print("longitude = \(location.coordinate.longitude), latitude = \(location.coordinate.latitude)")
             let latitude = "\(location.coordinate.latitude)"
             let longitude = "\(location.coordinate.longitude)"
-            presenter.showCurrentWeather(fromLat: latitude, andLong: longitude) { weather in
+            presenter.showWeather(fromLat: latitude, andLong: longitude) { weather in
                 DispatchQueue.main.async {
                     self.temperatureLabel.text = "\(weather.temperature)ºC"
                     self.weatherIcon.image = UIImage(named: weather.weatherIcon)

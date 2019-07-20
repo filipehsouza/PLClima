@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3907384622DFA6650093955D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3907384522DFA6650093955D /* AppDelegate.swift */; };
-		3907384822DFA6650093955D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3907384722DFA6650093955D /* ViewController.swift */; };
 		3907384B22DFA6650093955D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3907384922DFA6650093955D /* Main.storyboard */; };
 		3907384D22DFA6660093955D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3907384C22DFA6660093955D /* Assets.xcassets */; };
 		3907385022DFA6660093955D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3907384E22DFA6660093955D /* LaunchScreen.storyboard */; };
@@ -22,7 +21,21 @@
 		3907387522DFCBAA0093955D /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3907387422DFCBAA0093955D /* WeatherPresenter.swift */; };
 		3907387722DFCDD10093955D /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3907387622DFCDD10093955D /* WeatherViewModel.swift */; };
 		3907387922DFD17C0093955D /* WeatherRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3907387822DFD17C0093955D /* WeatherRouter.swift */; };
+		39451B6522E290AD0054EC43 /* PLClimaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39451B6422E290AD0054EC43 /* PLClimaTests.swift */; };
+		39451B7422E296080054EC43 /* ChangeCityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39451B7322E296080054EC43 /* ChangeCityPresenter.swift */; };
+		39451B7622E298090054EC43 /* ChangeCityRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39451B7522E298090054EC43 /* ChangeCityRouter.swift */; };
+		39451B7822E298E90054EC43 /* ChangeCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39451B7722E298E90054EC43 /* ChangeCityViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		39451B6722E290AD0054EC43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3907383A22DFA6650093955D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3907384122DFA6650093955D;
+			remoteInfo = PLClima;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		3907386A22DFB67A0093955D /* Embed Frameworks */ = {
@@ -41,7 +54,6 @@
 /* Begin PBXFileReference section */
 		3907384222DFA6650093955D /* PLClima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLClima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3907384522DFA6650093955D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3907384722DFA6650093955D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3907384A22DFA6650093955D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3907384C22DFA6660093955D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3907384F22DFA6660093955D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +67,12 @@
 		3907387422DFCBAA0093955D /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
 		3907387622DFCDD10093955D /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		3907387822DFD17C0093955D /* WeatherRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRouter.swift; sourceTree = "<group>"; };
+		39451B6222E290AD0054EC43 /* PLClimaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PLClimaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		39451B6422E290AD0054EC43 /* PLClimaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLClimaTests.swift; sourceTree = "<group>"; };
+		39451B6622E290AD0054EC43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39451B7322E296080054EC43 /* ChangeCityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityPresenter.swift; sourceTree = "<group>"; };
+		39451B7522E298090054EC43 /* ChangeCityRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityRouter.swift; sourceTree = "<group>"; };
+		39451B7722E298E90054EC43 /* ChangeCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +84,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		39451B5F22E290AD0054EC43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				3907384422DFA6650093955D /* PLClima */,
+				39451B6322E290AD0054EC43 /* PLClimaTests */,
 				3907385722DFA6AD0093955D /* Frameworks */,
 				3907384322DFA6650093955D /* Products */,
 			);
@@ -82,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				3907384222DFA6650093955D /* PLClima.app */,
+				39451B6222E290AD0054EC43 /* PLClimaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,7 +121,6 @@
 				3907385E22DFB0830093955D /* Modules */,
 				3907385D22DFAC6A0093955D /* Support Files */,
 				3907385C22DFAC4A0093955D /* Storyboards */,
-				3907384722DFA6650093955D /* ViewController.swift */,
 			);
 			path = PLClima;
 			sourceTree = "<group>";
@@ -190,6 +216,9 @@
 		3907386522DFB1580093955D /* ChangeCity */ = {
 			isa = PBXGroup;
 			children = (
+				39451B7022E291F40054EC43 /* View */,
+				39451B6E22E291E50054EC43 /* Presenter */,
+				39451B6C22E291D50054EC43 /* Router */,
 			);
 			path = ChangeCity;
 			sourceTree = "<group>";
@@ -219,6 +248,39 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
+		39451B6322E290AD0054EC43 /* PLClimaTests */ = {
+			isa = PBXGroup;
+			children = (
+				39451B6422E290AD0054EC43 /* PLClimaTests.swift */,
+				39451B6622E290AD0054EC43 /* Info.plist */,
+			);
+			path = PLClimaTests;
+			sourceTree = "<group>";
+		};
+		39451B6C22E291D50054EC43 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				39451B7522E298090054EC43 /* ChangeCityRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		39451B6E22E291E50054EC43 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				39451B7322E296080054EC43 /* ChangeCityPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		39451B7022E291F40054EC43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				39451B7722E298E90054EC43 /* ChangeCityViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,6 +302,24 @@
 			productReference = 3907384222DFA6650093955D /* PLClima.app */;
 			productType = "com.apple.product-type.application";
 		};
+		39451B6122E290AD0054EC43 /* PLClimaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39451B6B22E290AD0054EC43 /* Build configuration list for PBXNativeTarget "PLClimaTests" */;
+			buildPhases = (
+				39451B5E22E290AD0054EC43 /* Sources */,
+				39451B5F22E290AD0054EC43 /* Frameworks */,
+				39451B6022E290AD0054EC43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				39451B6822E290AD0054EC43 /* PBXTargetDependency */,
+			);
+			name = PLClimaTests;
+			productName = PLClimaTests;
+			productReference = 39451B6222E290AD0054EC43 /* PLClimaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -252,6 +332,10 @@
 				TargetAttributes = {
 					3907384122DFA6650093955D = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					39451B6122E290AD0054EC43 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 3907384122DFA6650093955D;
 					};
 				};
 			};
@@ -269,6 +353,7 @@
 			projectRoot = "";
 			targets = (
 				3907384122DFA6650093955D /* PLClima */,
+				39451B6122E290AD0054EC43 /* PLClimaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -284,6 +369,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		39451B6022E290AD0054EC43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -291,11 +383,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39451B7422E296080054EC43 /* ChangeCityPresenter.swift in Sources */,
+				39451B7622E298090054EC43 /* ChangeCityRouter.swift in Sources */,
 				3907386C22DFBC310093955D /* Weather.swift in Sources */,
 				3907387922DFD17C0093955D /* WeatherRouter.swift in Sources */,
+				39451B7822E298E90054EC43 /* ChangeCityViewController.swift in Sources */,
 				3907387722DFCDD10093955D /* WeatherViewModel.swift in Sources */,
 				3907387522DFCBAA0093955D /* WeatherPresenter.swift in Sources */,
-				3907384822DFA6650093955D /* ViewController.swift in Sources */,
 				3907386E22DFBDBE0093955D /* WeatherInteractor.swift in Sources */,
 				3907386722DFB3C60093955D /* WeatherViewController.swift in Sources */,
 				3907387322DFC26B0093955D /* WeatherApiService.swift in Sources */,
@@ -304,7 +398,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		39451B5E22E290AD0054EC43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39451B6522E290AD0054EC43 /* PLClimaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		39451B6822E290AD0054EC43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3907384122DFA6650093955D /* PLClima */;
+			targetProxy = 39451B6722E290AD0054EC43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3907384922DFA6650093955D /* Main.storyboard */ = {
@@ -486,6 +596,46 @@
 			};
 			name = Release;
 		};
+		39451B6922E290AD0054EC43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4N8FRX4J49;
+				INFOPLIST_FILE = PLClimaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fhs.PLClimaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PLClima.app/PLClima";
+			};
+			name = Debug;
+		};
+		39451B6A22E290AD0054EC43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4N8FRX4J49;
+				INFOPLIST_FILE = PLClimaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fhs.PLClimaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PLClima.app/PLClima";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -503,6 +653,15 @@
 			buildConfigurations = (
 				3907385522DFA6660093955D /* Debug */,
 				3907385622DFA6660093955D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39451B6B22E290AD0054EC43 /* Build configuration list for PBXNativeTarget "PLClimaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39451B6922E290AD0054EC43 /* Debug */,
+				39451B6A22E290AD0054EC43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
